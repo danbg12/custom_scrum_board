@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  postgres-db:
+    image: postgres:15-alpine
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: jira
+      POSTGRES_PASSWORD: JiraRush
+      POSTGRES_DB: jira
+    ports:
+      - "5432:5432"
+
+  postgres-db-test:
+    image: postgres:15-alpine
+    container_name: postgres-db-test
+    environment:
+      POSTGRES_USER: jira
+      POSTGRES_PASSWORD: JiraRush
+      POSTGRES_DB: jira-test
+    ports:
+      - "5433:5432"
