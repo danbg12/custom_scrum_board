@@ -1,5 +1,7 @@
 Custom ScrumBoard
 
+Lightweight tool that generates printable task cards for physical Scrum boards. It integrates with Team Foundation Server (TFS) and Azure DevOps to fetch work items and export them as neatly designed PDF cards. Ideal for teams who prefer a hands-on approach to sprint planning and task tracking.
+
 TO RUN THE PROJECT, YOU NEED TO CREATE A .env FILE IN THE PROJECT ROOT WITH THE FOLLOWING CONTENT:
 
 DB_URL= URL for connecting to the database
@@ -22,3 +24,5 @@ docker-compose build\
 docker-compose up -d
 
 When DB is up and running, you can run the application using: CustomScrumBoardApplication
+
+Autentication is done using OAuth2, so you need to register your application with GitHub, Google, and GitLab to get the client IDs and secrets.\
