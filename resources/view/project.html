@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<!--/*@thymesVar id="project" type="com.javarush.jira.bugtracking.project.to.ProjectToFull"*/-->
-<!--/*@thymesVar id="fragment" type="boolean"*/-->
-<!--/*@thymesVar id="authUser" type="com.javarush.jira.login.AuthUser"*/-->
 <th:block
         th:replace="~{layout/bugtrackLayout::view(${project}, ${authUser.isManager()}?'/ui/mngr/projects/edit/':null, ~{::project}, ${fragment})}">
     <project>

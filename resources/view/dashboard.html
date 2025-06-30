@@ -2,7 +2,7 @@
 <html lang="ru" xmlns:th="http://www.thymeleaf.org">
 
 <th:block
-        th:replace="~{layout/main::page(title='JiraRush: mini bugtracking system',appMainFluid=~{::appMain}, activeMenuItem='dashboard')}">
+        th:replace="~{layout/main::page(title='Custom ScrumBoard: mini bugtracking system',appMainFluid=~{::appMain}, activeMenuItem='dashboard')}">
     <appMain>
         <h1>Dashboard</h1>
         <div class="card">
@@ -90,7 +90,6 @@
 <script src="/static/js/common.js"></script>
 <script src="/static/js/contextMenu.js"></script>
 <script src="/static/js/dashboard.js"></script>
-<!--        https://stackoverflow.com/questions/30398698/how-to-access-model-attribute-in-jquery-->
 <script th:inline="javascript">
     const taskStatusRefs = [[${taskStatusRefs}]];
 </script>

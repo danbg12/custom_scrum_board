@@ -1,56 +1,24 @@
-## [REST API](http://localhost:8080/doc)
+Custom ScrumBoard
 
-ДЛЯ ЗАПУСКА ПРОЕКТА НУЖНО СОЗДАТЬ В КОРНЕ ПРОЕКТА ФАЙЛ `.env` С СЛЕДУЮЩИМ СОДЕРЖИМОМ:
+TO RUN THE PROJECT, YOU NEED TO CREATE A .env FILE IN THE PROJECT ROOT WITH THE FOLLOWING CONTENT:
 
-DB_URL= урл для подключения к бд\
-DB_USERNAME= имя пользователя для подключения к бд\
-DB_PASSWORD= пароль для подключения к бд\
-GH_CLINET_ID= гтх id для подключения к github\
-GH_CLIENT_SECRET= пароль для подключения к github\
-GOOGLE_CLIENT_ID= идентификатор клиента для подключения к google\
-GOOGLE_CLIENT_SECRET= пароль для подключения к google\
-GITLAB_CLIENT_ID= гитлаб id для подключения к gitlab\
-GITLAB_CLIENT_SECRET= пароль для подключения к gitlab\
-MAIL_HOST= хост для почты\
-MAIL_USERNAME= логин для почты\
-MAIL_PASSWORD= пароль для почты
+DB_URL= URL for connecting to the database
+DB_USERNAME= username for connecting to the database
+DB_PASSWORD= password for connecting to the database
+GH_CLIENT_ID= GitHub ID for connecting to GitHub
+GH_CLIENT_SECRET= password for connecting to GitHub
+GOOGLE_CLIENT_ID= client ID for connecting to Google
+GOOGLE_CLIENT_SECRET= password for connecting to Google
+GITLAB_CLIENT_ID= GitLab ID for connecting to GitLab
+GITLAB_CLIENT_SECRET= password for connecting to GitLab
+MAIL_HOST= host for email
+MAIL_USERNAME= login for email
+MAIL_PASSWORD= password for email
 
-Библиотека `dotenv-java` автоматически загрузит эти переменные окружения при запуске приложения.
+The dotenv-java library will automatically load these environment variables when the application starts.
 
-## Концепция:
+After that run docker-compose up to start the DB using \
+docker-compose build\
+docker-compose up -d
 
-- Spring Modulith
-    - [Spring Modulith: достигли ли мы зрелости модульности](https://habr.com/ru/post/701984/)
-    - [Introducing Spring Modulith](https://spring.io/blog/2022/10/21/introducing-spring-modulith)
-    - [Spring Modulith - Reference documentation](https://docs.spring.io/spring-modulith/docs/current-SNAPSHOT/reference/html/)
-
-```
-  url: jdbc:postgresql://localhost:5432/jira
-  username: jira
-  password: JiraRush
-```
-
-- Есть 2 общие таблицы, на которых не fk
-    - _Reference_ - справочник. Связь делаем по _code_ (по id нельзя, тк id привязано к окружению-конкретной базе)
-    - _UserBelong_ - привязка юзеров с типом (owner, lead, ...) к объекту (таска, проект, спринт, ...). FK вручную будем
-      проверять
-
-## Аналоги
-
-- https://java-source.net/open-source/issue-trackers
-
-## Тестирование
-
-- https://habr.com/ru/articles/259055/
-
-Список выполненных задач:\
-
-Удалить социальные сети: vk, yandex.
-
-Вынести чувствительную информацию в отдельный проперти файл:
-    логин\
-    пароль БД\
-    идентификаторы для OAuth регистрации/авторизации\
-    настройки почты
-
-Сделать рефакторинг метода com.javarush.jira.bugtracking.attachment.FileUtil#upload чтоб он использовал современный подход для работы с файловой системмой. 
+When DB is up and running, you can run the application using: CustomScrumBoardApplication

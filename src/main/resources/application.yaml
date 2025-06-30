@@ -1,4 +1,3 @@
-#  https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 app:
   host-url: http://localhost:8080
   test-mail: jira4jr@gmail.com
@@ -14,16 +13,13 @@ spring:
     show-sql: true
     open-in-view: false
 
-    # validate db by model
     hibernate:
       ddl-auto: validate
 
     properties:
-      #  http://docs.jboss.org/hibernate/orm/5.3/userguide/html_single/Hibernate_User_Guide.html#configurations
       hibernate:
         format_sql: true
         default_batch_fetch_size: 20
-        # https://stackoverflow.com/questions/21257819/what-is-the-difference-between-hibernate-jdbc-fetch-size-and-hibernate-jdbc-batc
         jdbc.batch_size: 20
   datasource:
     url: ${DB_URL}
@@ -33,7 +29,6 @@ spring:
   liquibase:
     changeLog: "classpath:db/changelog/db.changelog-master.yaml"
 
-  # Jackson Fields Serialization
   jackson:
     visibility:
       field: any
@@ -41,7 +36,6 @@ spring:
       setter: none
       is-getter: none
 
-  # https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#common-application-properties-cache
   cache:
     cache-names: users
     caffeine.spec: maximumSize=10000,expireAfterAccess=5m
@@ -103,11 +97,10 @@ logging:
     org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver: DEBUG
 
 server:
-  #  https://springdoc.org/index.html#how-can-i-deploy-springdoc-openapi-ui-behind-a-reverse-proxy
   forward-headers-strategy: framework
   servlet:
     encoding:
-      charset: UTF-8 # Charset of HTTP requests and responses. Added to the "Content-Type" header if not set explicitly
-      enabled: true # Enable http encoding support
+      charset: UTF-8
+      enabled: true
       force: true
 springdoc.swagger-ui.path: /doc
