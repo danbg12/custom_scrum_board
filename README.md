@@ -39,11 +39,11 @@ docker-compose up -d
 When DB is up and running, you can run the application using: CustomScrumBoardApplication
 
 Autentication is done using OAuth2, so you need to register your application with GitHub, Google, and GitLab to get the client IDs and secrets.\
-![Authentification](src/main/resources/readMe_images/Screenshot 2025-06-30 133454.png)
+![Screenshot 2025-06-30 133454](https://github.com/user-attachments/assets/c12dacae-d536-4a79-9876-a3a42f87ce24)
 
 The bottom section of the application, or footer, 
 is set against a dark background and serves as a comprehensive resource hub. It's clearly divided into three main columns and a copyright notice.
-![Bottom](src/main/resources/readMe_images/Screenshot 2025-06-30 133520.png)
+![Screenshot 2025-06-30 133520](https://github.com/user-attachments/assets/a3a9612a-b9e4-427a-ac5e-86e0d3e45ea8)
 
 The "Dashboard" page serves as the central interface for visualizing and managing project progress in a Scrum-specific manner. Its design is clean and functional, 
 emphasizing clarity and quick access to essential information.
@@ -51,9 +51,10 @@ The dashboard is designed to provide a quick and intuitive overview of the proje
 in distinct columns ("TO DO," "IN PROGRESS") and using status indicators ("Days left: 0," "Ready for review"), 
 it allows team members and managers to grasp the project's state and what needs attention at a glance. It is clearly a tool focused on productivity 
 and transparency within Agile methodologies.
-![Dashboard](src/main/resources/readMe_images/Screenshot 2025-06-30 133609.png)
+![Screenshot 2025-06-30 133609](https://github.com/user-attachments/assets/aee05442-44ec-4a52-a58d-f0d33e881049)
+
 
 The "Reports" page is dedicated to visualizing project and sprint performance, offering an analytical perspective on work progress. 
 It's a crucial section for project managers and teams who want to evaluate efficiency and identify trends.
-![Reports](src/main/resources/readMe_images/Screenshot 2025-06-30 133641.png)
+![Screenshot 2025-06-30 133641](https://github.com/user-attachments/assets/7c6cf1d1-5579-4d9a-8b84-0114ba8e9aeb)
 
